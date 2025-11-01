@@ -6,7 +6,7 @@ const Main = () => {
 
   // Fetch all places from backend
   useEffect(() => {
-    fetch("http://localhost:5001/places")
+    fetch("https://travel-backend-d2fb.onrender.com/places")
       .then((res) => res.json())
       .then((data) => setPlaces(data))
       .catch((err) => console.error("❌ Error fetching places:", err));

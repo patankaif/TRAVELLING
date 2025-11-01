@@ -1,0 +1,76 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+    /* ✨ Glassmorphism + gradient */
+    background: rgba(79, 172, 254, 0.75);
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.85), rgba(0, 242, 254, 0.85));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  
+    transition: transform 0.5s ease, opacity 0.5s ease, background 0.3s ease;
+  }
+  
+  /* 🧭 Smooth hide on scroll */
+  .navbar--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  
+  /* 🌴 Centered, Stylish Title */
+  .navbar-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+  
+    /* ✨ Text gradient */
+    background: linear-gradient(90deg, #fff 20%, #ffe082 60%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    transition: transform 0.3s ease, letter-spacing 0.3s ease, filter 0.3s ease;
+  }
+  
+  /* 🌟 Hover Animation */
+  .navbar-title:hover {
+    transform: scale(1.08);
+    letter-spacing: 3px;
+    filter: drop-shadow(0 0 10px rgba(255, 224, 130, 0.8));
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 1024px) {
+    .navbar-title {
+      font-size: 2.3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 8px 0;
+    }
+  
+    .navbar-title {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-title {
+      font-size: 1.5rem;
+    }
+  }
+  

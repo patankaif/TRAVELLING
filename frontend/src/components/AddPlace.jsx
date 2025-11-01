@@ -11,7 +11,7 @@ export default function AddPlace() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5001/places", form);
+      await axios.post("https://travel-backend-d2fb.onrender.com/places", form);
       alert("✅ Place added successfully!");
       setForm({ name: "", location: "", imageUrl: "" });
     } catch (err) {

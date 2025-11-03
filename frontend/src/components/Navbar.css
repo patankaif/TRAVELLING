@@ -1,76 +1,125 @@
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  
-    /* ✨ Glassmorphism + gradient */
-    background: rgba(79, 172, 254, 0.75);
-    background: linear-gradient(135deg, rgba(79, 172, 254, 0.85), rgba(0, 242, 254, 0.85));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  
-    padding: 10px 20px;
-    color: white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  
-    transition: transform 0.5s ease, opacity 0.5s ease, background 0.3s ease;
-  }
-  
-  /* 🧭 Smooth hide on scroll */
-  .navbar--hidden {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  
-  /* 🌴 Centered, Stylish Title */
+  display: flex;
+  justify-content: space-between; /* Changed to space-between */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* ✨ Glassmorphism + gradient */
+  background: rgba(79, 172, 254, 0.75);
+  background: linear-gradient(135deg, rgba(79, 172, 254, 0.85), rgba(0, 242, 254, 0.85));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 10px 30px;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* transition: transform 0.5s ease, opacity 0.5s ease, background 0.3s ease; */
+}
+
+/* 🧭 Smooth hide on scroll */
+.navbar--hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* 🌴 Centered, Stylish Title */
+.navbar-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  /* ✨ Text gradient */
+  background: linear-gradient(90deg, #fff 20%, #ffe082 60%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: transform 0.3s ease, letter-spacing 0.3s ease, filter 0.3s ease;
+}
+
+/* 🌟 Hover Animation */
+.navbar-title:hover {
+  transform: scale(1.08);
+  letter-spacing: 3px;
+  filter: drop-shadow(0 0 10px rgba(255, 224, 130, 0.8));
+}
+
+/* ✈️ Login Button */
+.login-btn {
+  background: white;
+  color: #007bff;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.login-btn:hover {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
   .navbar-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    cursor: pointer;
-    text-transform: uppercase;
-  
-    /* ✨ Text gradient */
-    background: linear-gradient(90deg, #fff 20%, #ffe082 60%, #fff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    transition: transform 0.3s ease, letter-spacing 0.3s ease, filter 0.3s ease;
+    font-size: 2.3rem;
   }
-  
-  /* 🌟 Hover Animation */
-  .navbar-title:hover {
-    transform: scale(1.08);
-    letter-spacing: 3px;
-    filter: drop-shadow(0 0 10px rgba(255, 224, 130, 0.8));
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 20px;
   }
-  
-  /* 📱 Responsive Design */
-  @media (max-width: 1024px) {
-    .navbar-title {
-      font-size: 2.3rem;
-    }
+
+  .navbar-title {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
   }
-  
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 8px 0;
-    }
-  
-    .navbar-title {
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-    }
+
+  .login-btn {
+    font-size: 0.9rem;
+    padding: 6px 14px;
   }
-  
-  @media (max-width: 480px) {
-    .navbar-title {
-      font-size: 1.5rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .navbar-title {
+    font-size: 1.5rem;
   }
-  
+
+  .login-btn {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+
+.login-btn {
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 179, 255, 0.6);
+}

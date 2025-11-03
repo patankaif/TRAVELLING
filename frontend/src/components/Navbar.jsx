@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import Login from "./Login";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -27,6 +28,9 @@ export default function Navbar() {
       <h1 className="navbar-title" onClick={() => navigate("/")}>
         Travelling
       </h1>
+      <button className="login-btn" onClick={() => navigate("/login")}>
+        Login
+      </button>
     </div>
   );
 }

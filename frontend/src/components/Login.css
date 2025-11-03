@@ -1,0 +1,112 @@
+/* 🔐 Auth Page Styles (Login + Signup) */
+.auth-container {
+    background: #ffffff;
+    width: 380px;
+    margin: 80px auto;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .auth-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 45px rgba(0, 123, 255, 0.25);
+  }
+  
+  .auth-container h2 {
+    margin-bottom: 1.8rem;
+    color: #222;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  /* 🧩 Input Fields */
+  .auth-container form input {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1.1rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.25s ease;
+  }
+  
+  .auth-container form input::placeholder {
+    color: #999;
+  }
+  
+  .auth-container form input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+  }
+  
+  /* 🚀 Buttons */
+  .auth-container button {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+  }
+  
+  .auth-container button:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  /* 🧠 Bottom Text & Links */
+  .auth-container p {
+    margin-top: 1.2rem;
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  .auth-container .link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .auth-container .link:hover {
+    color: #0056b3;
+    text-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* ✨ Small Aesthetic Touches */
+  .auth-container input,
+  .auth-container button {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .auth-container h2 {
+    font-family: "Poppins", sans-serif;
+  }
+  

@@ -6,5 +6,5 @@ const placeSchema = new mongoose.Schema({
   image: { type: String, required: true }
 });
 
-const Place = mongoose.model("Place", placeSchema, "places"); // 👈 forces collection name
+const Place = mongoose.model("Place", placeSchema, "places"); 
 export default Place;

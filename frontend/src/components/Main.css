@@ -1,0 +1,294 @@
+/* 🌍 General Page Styling */
+.main {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+  }
+  
+  /* 🌄 Heading */
+  .heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #2c3e50;
+  }
+  
+  /* 🔍 Search Bar Section */
+  .search-container {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto 70px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 20px 26px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .search-bar:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* 📜 Dropdown */
+  .search-dropdown {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    max-height: 250px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .search-item {
+    padding: 16px 24px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.1rem;
+    transition: background 0.25s ease;
+  }
+  
+  .search-item:hover {
+    background: #f1f9ff;
+  }
+  
+  /* 🏞️ Places Grid (Exactly 3 per row) */
+  .places-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    padding: 0 80px 80px;
+    justify-items: center;
+  }
+  
+  /* 🖼️ Place Card */
+  .place-card {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .place-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* 🏔️ Image */
+  .place-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 4px solid #f0f0f0;
+  }
+  
+  /* 🏷️ Info */
+  .place-card h3 {
+    margin: 18px 18px 6px;
+    font-size: 1.5rem;
+    color: #222;
+  }
+  
+  .place-card p {
+    margin: 0 18px 20px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* ⏳ Loading */
+  .loading {
+    font-size: 1.2rem;
+    margin-top: 40px;
+    color: #555;
+  }
+  
+  /* 🖼️ Fullscreen Modal */
+  .fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .fullscreen-content {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 850px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: popIn 0.3s ease-out;
+  }
+  
+  .fullscreen-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .fullscreen-content h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .fullscreen-content p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* ❌ Close Button */
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 10px 12px;
+    transition: background 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background: #e84118;
+  }
+  
+  /* ✨ Animation */
+  @keyframes popIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 992px) {
+    .places-container {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 40px 70px;
+    }
+    .place-image {
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .places-container {
+      grid-template-columns: 1fr;
+      padding: 0 25px 60px;
+    }
+    .place-image {
+      height: 220px;
+    }
+    .search-container {
+      width: 85%;
+    }
+  }
+  
+
+  /* ❌ Clear Button inside Search Bar */
+.clear-btn {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f2f2f2;
+    border: none;
+    color: #555;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .clear-btn:hover {
+    background: #ff6b6b;
+    color: white;
+    transform: translateY(-50%) scale(1.05);
+  }
+  
+  /* 🌍 States Dropdown Styling */
+.state-dropdown {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    z-index: 10;
+    max-height: 350px;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .state-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  
+  .state-item {
+    background: #f5f6f7;
+    padding: 12px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  .state-item:hover {
+    background: #0071e3;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .no-results {
+    color: #888;
+    text-align: center;
+    font-size: 1rem;
+  }
+  

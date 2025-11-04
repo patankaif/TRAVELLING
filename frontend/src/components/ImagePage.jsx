@@ -9,7 +9,7 @@ export default function ImagePage() {
   useEffect(() => {
     const fetchPlaces = async () => {
       try {
-        const res = await axios.get("http://localhost:5001/places");
+        const res = await axios.get("https://travel-backend-d2fb.onrender.com//places");
         setPlaces(res.data);
       } catch (err) {
         console.error("❌ Error fetching places:", err);

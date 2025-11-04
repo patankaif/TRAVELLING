@@ -5,6 +5,7 @@ import ImagePage from "./components/ImagePage.jsx";
 import AddPlace from "./components/AddPlace.jsx";
 import Login from "./components/Login.jsx";
 import Signup from "./components/Signup.jsx";
+import StatePage from "./components/StatePage.jsx"; // ✅ Import StatePage
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/add" element={<AddPlace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/state/:stateName" element={<StatePage />} /> {/* ✅ New route */}
       </Routes>
     </>
   );
